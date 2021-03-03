@@ -7,10 +7,9 @@
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs>
             <a-assets>
-                <video id="helmet_sound" src="assets/video.mp4" response-type="arraybuffer" autoplay="true" loop></video>
-
+                <video id="video" src="assets/video.mp4" response-type="arraybuffer" autoplay="true" loop></video>
             </a-assets>
-
+            <a-video src="#video" width="16" height="9" position="0 0 -20"></a-video>
             <!-- handle hiro marker -->
             <a-marker preset="hiro">
                 <!-- raw.githack.com serves raw files directly from GitHub,
@@ -19,7 +18,7 @@
 
 
                 <!-- second entity: reference to the above audio -->
-                <a-entity sound="src: #helmet_sound; volume: 10; loop: true">
+                <a-entity sound="src: #video; volume: 10; loop: true">
                 </a-entity>
             </a-marker>
 
